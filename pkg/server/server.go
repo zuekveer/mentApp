@@ -1,5 +1,7 @@
 package server
 
+import "strconv"
+
 type Server struct {
 	config *Config
 }
@@ -8,11 +10,11 @@ type Config struct {
 	Port int8 `env:"SERVER_PORT"`
 }
 
-func (s *Server) Start() error {
+func (strt *Server) Start() error {
 	return nil
 }
 
-func (s *Server) Shutdown() error {
+func (stp *Server) Shutdown() error {
 	return nil
 }
 
@@ -20,6 +22,10 @@ func New(cfg *Config) *Server {
 	return &Server{
 		config: cfg,
 	}
+	if len(strconv.Itoa(cfg.Port)) != 2 {
+
+	}
+	return nil
 }
 
 //описать методы старт и шатдавн для класса сервер. - <3

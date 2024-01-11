@@ -18,10 +18,10 @@ func New(cfg *Config) *Repository {
 	}
 }
 
-func (s *Repository) Start() error {
+func (strt *Repository) Start() error {
 	return nil
 }
 
-func (s *Repository) Shutdown() error {
+func (stp *Repository) Shutdown() error {
 	return nil
 }
